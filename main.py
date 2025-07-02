@@ -20,7 +20,7 @@ def root():
 
 origins = [
     "http://localhost:3000",               # local dev
-    "https://your-vercel-url.vercel.app"   # deployed frontend
+    "https://deploying-front-end.vercel.app"   # deployed frontend
 ]
 
 app.add_middleware(
