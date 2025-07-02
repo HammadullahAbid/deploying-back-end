@@ -9,6 +9,8 @@ from fastapi.middleware.cors import CORSMiddleware
 import models
 from database import engine, SessionLocal
 
+models.Base.metadata.create_all(bind=engine)
+
 
 app = FastAPI()
 
