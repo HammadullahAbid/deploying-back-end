@@ -3,13 +3,12 @@ from sqlalchemy.orm import Session
 from pydantic import BaseModel, Field
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from fastapi import HTTPException, status
-from app.auth import hash_password, verify_password, create_access_token, decode_access_token
+from auth import hash_password, verify_password, create_access_token, decode_access_token
 from fastapi.middleware.cors import CORSMiddleware
 
-from app import models
-from app.database import engine, SessionLocal
+import models
+from database import engine, SessionLocal
 
-models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
